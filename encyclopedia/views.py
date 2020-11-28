@@ -15,5 +15,6 @@ def title(request, title):
 
     htmlTitle = markdowner.convert(util.get_entry(title))
     return render(request, "encyclopedia/title.html", {
-        "title": htmlTitle
-    })
+        "title": htmlTitle,
+        "entry_name": title
+        })
